@@ -1,0 +1,32 @@
+# do des.do
+# Model Technology ModelSim SE-64 vlog 10.7f Compiler 2020.03 Mar 24 2020
+# Start time: 12:53:33 on Mar 06,2023
+# vlog des_stub.sv tb_des.sv 
+# -- Compiling module GenerateKeys
+# -- Compiling module PC1
+# -- Compiling module PC2
+# ** Warning: des_stub.sv(189): (vlog-2576) [BSOB] - Bit-select into 'temp_block' is out of bounds.
+# -- Compiling module SF
+# -- Compiling module EF
+# -- Compiling module feistel
+# -- Compiling module round
+# -- Compiling module IP
+# -- Compiling module FP
+# -- Compiling module S1_Box
+# -- Compiling module S2_Box
+# -- Compiling module S3_Box
+# -- Compiling module S4_Box
+# -- Compiling module S5_Box
+# -- Compiling module S6_Box
+# -- Compiling module S7_Box
+# -- Compiling module S8_Box
+# -- Compiling module DES
+# ** Error: (vlog-13069) des_stub.sv(1194): near "logic": syntax error, unexpected "SystemVerilog keyword 'logic'".
+# -- Compiling module stimulus
+# End time: 12:53:33 on Mar 06,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+# ** Error: C:/modeltech64_10.7f/win64/vlog failed.
+# Error in macro ./des.do line 26
+# C:/modeltech64_10.7f/win64/vlog failed.
+#     while executing
+# "vlog des_stub.sv tb_des.sv"
