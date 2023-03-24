@@ -335,7 +335,7 @@ module feistel (inp_block, subkey, out_block);
 
    logic [47:0] EF_out;
    logic [47:0] s_inp;
-   logic [32:0] SF_inp;
+   logic [31:0] SF_inp;
    logic [3:0] s1o,s2o,s3o,s4o,s5o,s6o,s7o,s8o;
 
    EF ef(inp_block,EF_out);
@@ -365,8 +365,10 @@ module round (inp_block, subkey, out_block);
 
    logic [31:0] left_inp;
    logic [31:0] right_inp;
-   assign left_inp [31:0] = inp_block [31:0];
-   assign right_inp [31:0] = inp_block [63:32];
+
+   //Swapped These
+   assign right_inp [31:0] = inp_block [31:0];
+   assign left_inp [31:0] = inp_block [63:32];
 
    logic [31:0] left_out;
    logic [31:0] right_out;
@@ -377,8 +379,9 @@ module round (inp_block, subkey, out_block);
 
    assign right_out = left_inp^feist_out;
 
-   assign out_block [31:0] = left_out;
-   assign out_block [63:32] = right_out;
+   //Swapped These
+   assign out_block [63:32] = left_out;
+   assign out_block [31:0] = right_out;
 
 endmodule // round1
 
